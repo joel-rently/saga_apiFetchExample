@@ -22,6 +22,20 @@ class App extends Component {
       todoList: [],
     };
   }
+  componentDidMount() {
+    // Called after the component has been rendered to the screen
+    console.log('Component mounted');
+  }
+
+  componentDidUpdate() {
+    // Called after the component's state or props have been updated
+    console.log('Component updated');
+  }
+
+  componentWillUnmount() {
+    // Called when the component is about to be unmounted from the screen
+    console.log('Component will unmount');
+  }
 
   card = item => {
     return (
@@ -150,7 +164,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     alignItems: 'center',
-    backgroundColor: '#fffff',
+    backgroundColor: '#ffffff',
   },
   input: {
     color: 'black',
