@@ -1,0 +1,23 @@
+import { ADD_TODO,DLT_TODO,TOGGLE } from "./actionTypes";
+let count = 0;
+export const addTodo = todoText => {
+  return {
+    type: ADD_TODO,
+    todoText,
+    id: ++count,
+  };
+};
+
+export const dltTodo = id => {
+  return {
+    type: DLT_TODO,
+    id,
+  };
+};
+
+export const checked = id => {
+  return {
+    type: TOGGLE,
+    id,
+  };
+};

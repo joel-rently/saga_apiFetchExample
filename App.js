@@ -11,7 +11,6 @@ import {
 import CheckBox from '@react-native-community/checkbox';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-
 class App extends Component {
   constructor() {
     super();
@@ -50,9 +49,8 @@ class App extends Component {
           {item.todo}
         </Text>
 
-        <TouchableOpacity
-          onPress={() => this.dltTodo(item.id)}>
-        <Icon name="delete" size={25} color="#900" style={{padding:10}} />
+        <TouchableOpacity onPress={() => this.dltTodo(item.id)}>
+          <Icon name="delete" size={25} color="#900" style={{padding: 10}} />
         </TouchableOpacity>
       </View>
     );
@@ -95,20 +93,17 @@ class App extends Component {
         <Text style={styles.heading}>Todo List:</Text>
 
         <View style={styles.column}>
-        <TextInput
-          style={styles.input}
-          onChangeText={this.handleChange}
-          value={this.state.todo}
-          placeholder="Enter Todo"
-          placeholderTextColor="#095fe8"></TextInput>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={this.addTodo}>
-          <Text style={styles.buttonText}>Add</Text>
-        </TouchableOpacity>
-      </View>
+          <TextInput
+            style={styles.input}
+            onChangeText={this.handleChange}
+            value={this.state.todo}
+            placeholder="Enter Todo"
+            placeholderTextColor="#095fe8"></TextInput>
+          <TouchableOpacity style={styles.button} onPress={this.addTodo}>
+            <Text style={styles.buttonText}>Add</Text>
+          </TouchableOpacity>
+        </View>
 
-        
         <FlatList
           data={this.state.todoList}
           renderItem={({item}) => this.card(item)}
@@ -120,9 +115,7 @@ class App extends Component {
 }
 
 const styles = StyleSheet.create({
-  paddingFlatlist:{padding:0,
-    paddingTop:20
-  },
+  paddingFlatlist: {padding: 0, paddingTop: 20},
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
@@ -141,7 +134,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     color: 'black',
-    elevation:15,
+    elevation: 15,
 
     padding: 15,
     fontStyle: 'italic',
@@ -152,8 +145,7 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
   },
   column: {
-
-    padding:10,
+    padding: 10,
     marginBottom: 9,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
@@ -168,7 +160,7 @@ const styles = StyleSheet.create({
   },
   input: {
     color: 'black',
-    elevation:15,
+    elevation: 15,
 
     padding: 10,
     width: 200,
@@ -178,12 +170,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#ede695',
   },
   button: {
-    elevation:9,
+    elevation: 9,
 
     padding: 12,
     backgroundColor: '#e68388',
     borderRadius: 13,
     borderColor: 'black',
+    borderWidth:1.5,
     shadowColor: 'gray',
   },
   buttonText: {
@@ -199,7 +192,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   card: {
-    elevation:9,
+    elevation: 9,
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 2,
@@ -228,7 +221,7 @@ const styles = StyleSheet.create({
   subHeading: {
     fontWeight: '500',
     marginBottom: 7,
-    color:'#FF6347'
+    color: '#FF6347',
   },
   strikeText: {
     color: 'black',
