@@ -58,10 +58,9 @@ class SourceCode extends Component {
             placeholderTextColor="#095fe8"></TextInput>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => {
-              this.props.addTodo(this.state.todo);
-              this.setState({todo: ''});
-            }}>
+            onPress={() =>{ this.props.addTodo(this.state.todo)
+              this.setState({todo:''})}
+            }>
             <Text style={styles.buttonText}>Add</Text>
           </TouchableOpacity>
         </View>

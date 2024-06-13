@@ -2,7 +2,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import configureStore from './redux/configStore';
-import SourceCode from './sourceCode';
+import SourceCode from './todoApp';
 const store = configureStore();
 store.subscribe(() => {
   console.log(store.getState());
