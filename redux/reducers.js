@@ -9,7 +9,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         todos: [
           ...state.todos,
-          {text: action.todoText, flag: false, id: action.id},
+          {todo: action.todo, flag: false, id: action.id},
         ],
       };
     case REMOVE_TODO:
