@@ -1,6 +1,2 @@
-export const CREATE_TODO = 'CREATE_TODO';
-export const CHECKED_TODO = 'CHECKED_TODO';
-export const REMOVE_TODO = 'REMOVE_TODO';
-export const CREATE_TODO_SAGA = 'CREATE_TODO_SAGA';
-export const CHECKED_TODO_SAGA = 'CHECKED_TODO_SAGA';
-export const REMOVE_TODO_SAGA = 'REMOVE_TODO_SAGA';
+export const SET_DATA = 'SET_DATA';
+export const FETCH_DATA = 'FETCH_DATA';

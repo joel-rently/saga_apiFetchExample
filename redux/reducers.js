@@ -1,29 +1,11 @@
-import {CREATE_TODO, CHECKED_TODO, REMOVE_TODO} from './actionTypes';
+import {SET_DATA} from './actionTypes';
 
 const initialState = {todos: []};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case CREATE_TODO:
-      return {
-        ...state,
-        todos: [
-          ...state.todos,
-          {todo: action.todo, flag: false, id: action.id},
-        ],
-      };
-    case REMOVE_TODO:
-      return {
-        ...state,
-        todos: state.todos.filter(item => action.id !== item.id),
-      };
-    case CHECKED_TODO:
-      return {
-        ...state,
-        todos: state.todos.map(item =>
-          item.id === action.id ? {...item, flag: !item.flag} : item,
-        ),
-      };
+    case SET_DATA:
+      return {...state, todos: action.data};
 
     default:
       return state;

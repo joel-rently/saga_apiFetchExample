@@ -1,5 +1,5 @@
 // configureStore.js
-import { createStore, applyMiddleware } from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import reducer from './reducers';
 import createSagaMiddleware from 'redux-saga';
 import Saga from './saga';

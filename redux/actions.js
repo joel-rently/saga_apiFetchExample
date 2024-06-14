@@ -1,18 +1,10 @@
-import {  CREATE_TODO_SAGA, REMOVE_TODO_SAGA, CHECKED_TODO_SAGA } from './actionTypes';
+import {SET_DATA, FETCH_DATA} from './actionTypes';
 
-let count = 0;
-export const addTodo = todoText => ({
-  type: CREATE_TODO_SAGA,
-  todo: todoText,
-  id: ++count,
+export const setData = data => ({
+  type: SET_DATA,
+  data,
 });
 
-export const dltTodo = id => ({
-  type: REMOVE_TODO_SAGA,
-  id,
-});
-
-export const checked = id => ({
-  type: CHECKED_TODO_SAGA,
-  id,
+export const fetchData = () => ({
+  type: FETCH_DATA,
 });
